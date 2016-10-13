@@ -1,7 +1,11 @@
 <div class="animsition container zoom-in-sm" data-animsition-in-duration="750" style="margin-top: 15px">
 	<h1>ScenicNobody</h1>
+	<span id="tagline">{{state.status}}</span>
+	<img src="{{state.lastImage.preview_url}}"/>
+	<a href="http://konachan.net/post/show/{{state.lastImage.id}}" target="_blank"><i class="fa fa-external-link-square"></i> View on Konachan</a>
 	<ul>
-		<li>Last image posted: {{lastImagePosted}}</li>
-		<li>Will post in: {{willPostIn}}</li>
+		<li>Author: {{state.lastImage.author}}</li>
+		<li>Tags: {{state.lastImage.tags}}</li>
+		<li>Score: {{state.lastImage.score}}</li>
 	</ul>
 </div>

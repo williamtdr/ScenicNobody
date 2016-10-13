@@ -7,11 +7,9 @@ module.exports = {
 	replaceAt(input, index, character) {
 		return input.substr(0, index) + character + input.substr(index + character.length);
 	},
-
 	randomInt(min, max) {
 		return Math.floor(Math.random() * (max - min + 1)) + min;
 	},
-
 	randomString(length) {
 		let text = "",
 			possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -21,10 +19,12 @@ module.exports = {
 
 		return text;
 	},
-
 	zeroPad(number, length) {
 		number = number.toString();
 
 		return number.length >= length ? number : new Array(length - number.length + 1).join("0") + number;
+	},
+	getUnixTime() {
+		return Math.floor(Date.now() / 1000);
 	}
 };

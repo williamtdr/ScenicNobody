@@ -1,5 +1,7 @@
+const ScenicNobody = require("../ScenicNobody");
+
 module.exports = function(app) {
 	app.get("/", (req, res) => {
-		res.render("home");
+		res.render("home", ScenicNobody);
 	});
 };

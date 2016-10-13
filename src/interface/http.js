@@ -8,8 +8,7 @@ const express = require("express"),
 	  server = require("http").createServer(),
 	  log = require("../log"),
 	  colors = require("colors"),
-	  utils = require("../utils"),
-	  ScenicNobody = require("../ScenicNobody");
+	  utils = require("../utils");
 
 let app = express();
 

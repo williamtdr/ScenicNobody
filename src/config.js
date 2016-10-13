@@ -54,7 +54,7 @@ module.exports = class Config {
 	get(key) {
 		var exists = get(this.data, key);
 
-		return exists ? exists : get(this.sample, key);
+		return exists !== undefined ? exists : get(this.sample, key);
 	}
 
 	// Sets a config value. Synchronous to prevent collision.
@@ -71,6 +71,8 @@ module.exports = class Config {
 
 			return true;
 		} catch(e) {
+			console.log(e);
+
 			return false;
 		}
 	}

@@ -30,11 +30,16 @@ const Konachan = {
 		if(image.jpeg_width < MINIMUM_SIZE.x)
 			return false; // too small (x)
 
+		return true;
+	},
+	imageDataToPath(image) {
 		const urlParts = image.jpeg_url.split("/");
 
 		return urlParts[3] + "/" + urlParts[4] + "/" + urlParts[5];
 	},
 	getPage(callback, page) {
+		log.info("Konachan", "Fetching page " + page + "...");
+
 		http.request({
 			host: REPOSITORY,
 			path: "/post.json?tags=scenic%20nobody&limit=100&page=" + page
@@ -52,13 +57,14 @@ const Konachan = {
 
 					for(let image of data)
 						if(Konachan.checkImage(image))
-							safeImages.push(check);
+							safeImages.push(image);
 
 					shuffle(safeImages);
 
 					callback(safeImages);
 				} catch(e) {
 					log.error("Konachan", "Error when calling API.");
+					console.log(e);
 
 					callback(false);
 				}

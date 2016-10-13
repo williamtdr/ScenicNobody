@@ -6,7 +6,7 @@ Thumbs.db
 
 # Folder config file
 Desktop.ini
-athena.iml
+ScenicNobody.iml
 
 # Mac crap
 .DS_Store
@@ -14,6 +14,4 @@ athena.iml
 # Project
 node_modules/
 config/config.json
-
-# Tern stuff that nobody except known needs
-.tern-project
+config/persistence.json
