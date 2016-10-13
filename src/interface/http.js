@@ -8,7 +8,8 @@ const express = require("express"),
 	  server = require("http").createServer(),
 	  log = require("../log"),
 	  colors = require("colors"),
-	  utils = require("../utils");
+	  utils = require("../utils"),
+	  ScenicNobody = require("../ScenicNobody");
 
 let app = express();
 
@@ -31,8 +32,8 @@ app.use((req, res, next) => {
 
 require("../app/routes")(app);
 
-let ip = global.userConfig.get("web_server.ip"),
-	port = global.userConfig.get("web_server.port");
+let ip = global.config.get("web_server.ip"),
+	port = global.config.get("web_server.port");
 
 server.listen(port, ip, () => {
 	log.info("HTTP", "Web server listening on " + ip + ":" + port);

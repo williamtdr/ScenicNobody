@@ -13,4 +13,12 @@
 			"secret": ""
 		}
 	}
+	"sources": {
+		"konachan": {
+			"repository": "konachan.net",
+			"blacklist": [],
+			"minimumScore": 0,
+			"minimumSize": [0, 0]
+		}
+	}
 }
