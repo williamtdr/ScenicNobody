@@ -10,10 +10,9 @@ function onConfigLoad() {
 log.setSourceColor("System", "blue");
 log.setSourceColor("Config", "cyan");
 log.setSourceColor("HTTP", "green");
-log.setSourceColor("Websocket", "yellow");
 
-log.info("System", "App Name");
-log.info("System", "by App Author");
+log.info("System", "ScenicNobody");
+log.info("System", "by @williamtdr");
 log.info("Config", "Reading configuration...");
 
 global.userConfig = new Config("config/config.json", onConfigLoad);

@@ -15,7 +15,6 @@
     "gulp-uglify": "^1.5.3"
   },
   "dependencies": {
-    "bufferutil": "^1.2.1",
     "colors": "^1.1.2",
     "compression": "^1.6.2",
     "cookie-parser": "^1.4.3",
@@ -23,7 +22,6 @@
     "express-handlebars": "^3.0.0",
     "lodash.get": "^4.3.0",
     "lodash.set": "^4.2.0",
-    "utf-8-validate": "^1.2.1",
-    "ws": "^1.1.1"
+    "moment": "^2.15.1"
   }
 }

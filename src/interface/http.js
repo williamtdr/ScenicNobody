@@ -5,13 +5,7 @@ const express = require("express"),
 	  compression = require("compression"),
 	  cookieParser = require("cookie-parser"),
 	  fs = require("fs"),
-	  ws = require("ws"),
 	  server = require("http").createServer(),
-	  WebSocketServer = require("ws").Server,
-	  wss = new WebSocketServer({
-		  server: server
-	  }),
-	  websocket = require("./websocket")(wss),
 	  log = require("../log"),
 	  colors = require("colors"),
 	  utils = require("../utils");
@@ -20,9 +14,7 @@ let app = express();
 
 app.engine("handlebars", exphbs({
 	defaultLayout: "main",
-	helpers: {
-
-	}
+	helpers: {}
 }));
 
 app.set("view engine", "handlebars");
