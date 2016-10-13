@@ -1,4 +1,4 @@
-Express Starter
+ScenicNobody
 ====
 
-Quick start for project powered by node (4.x+) with express (web server), handlebars (templating), gulp (minification & combination of client js/css), and middleware for cookies and gzip compression. Client site includes bootstrap and jquery, as well as a transition library, fonts and icon pack.
+Bot that posts cool images from konachan to twitter. Written in node.js with a simple web frontend.
