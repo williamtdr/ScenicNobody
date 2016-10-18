@@ -102,6 +102,7 @@ function advance() {
 
 		persistenceConfig.set("sources.konachan.content", []);
 		persistenceConfig.set("sources.konachan.page", page);
+		persistenceConfig.set("sources.konachan.progress", progress);
 
 		return advance();
 	}
